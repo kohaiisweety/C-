@@ -2,7 +2,7 @@
 {
     static bool Vis(int a) //неверная логика
     {
-        if (a%4 == 0) return false;
+        if (a%4 != 0) return false;
         return true;
     }
     static int[] GetNumbers(string m)
@@ -29,11 +29,12 @@
 
         if ( Vis(a[2]) )
         {
-            while (d < b[2]) { //бесконечный цикл
+            while (d < b[2]) { 
                 if (!Vis(d))
                 {
                     pogr++;
                 }
+                d++;
             }
             if (a[1]<3) { 
                     
