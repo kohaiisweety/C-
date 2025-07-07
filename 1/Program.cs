@@ -1,6 +1,6 @@
 ﻿class Program
 {
-    static bool Vis(int a) //неверная логика
+    static bool Vis(int a)
     {
         if (a%4 != 0) return false;
         return true;
