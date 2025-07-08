@@ -27,22 +27,42 @@
         int d = a[2];
         int pogr = 0;
 
-        if ( Vis(a[2]) )
+        if (Vis(a[2]))
         {
-            while (d < b[2]) { 
+            while (d < b[2])
+            {
                 if (!Vis(d))
                 {
                     pogr++;
                 }
                 d++;
             }
-            if (a[1]<3) { 
-                    
-            }     
+        }
+        else
+        {
+            if (a[0] > 2) pogr++;
+            else
+            {
+                if (a[1] == 29)
+                {
+                    pogr++;
+                }
+            }
+        }
+        if (!Vis(b[2]))
+        {
+            if (b[0] > 2) pogr++;
+            else
+            {
+                if (b[1] == 29)
+                {
+                    pogr++;
+                }
+            }
         }
 
 
-        return n;
+        return pogr;
     }
     static string IsNullOrNORead()
     {
